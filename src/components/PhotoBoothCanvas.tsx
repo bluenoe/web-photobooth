@@ -19,12 +19,12 @@ const PhotoBoothCanvas: React.FC<PhotoBoothCanvasProps> = ({ photos, layout }) =
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Define layout configurations
-    const layoutsConfig: Record<string, { rows: number; cols: number }> = {
-      '2x2': { rows: 2, cols: 2 },
-      '3x2': { rows: 2, cols: 3 },
-      '4x1': { rows: 1, cols: 4 },
-      '4x2': { rows: 2, cols: 4 },
-    };
+      const layoutsConfig: Record<string, { rows: number; cols: number }> = {
+        '2x2': { rows: 2, cols: 2 },
+        '3x2': { rows: 3, cols: 2 },
+        '4x1': { rows: 1, cols: 4 },
+        '4x2': { rows: 2, cols: 4 },
+      };
 
     const config = layoutsConfig[layout];
     if (!config) return;
