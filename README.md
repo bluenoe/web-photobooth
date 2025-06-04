@@ -1,28 +1,85 @@
-# Photobooth Web App
-  
-This is a project built with [Chef](https://chef.convex.dev) using [Convex](https://convex.dev) as its backend.
-  
-This project is connected to the Convex deployment named [`tidy-alpaca-590`](https://dashboard.convex.dev/d/tidy-alpaca-590).
-  
-## Project structure
-  
-The frontend code is in the `app` directory and is built with [Vite](https://vitejs.dev/).
-  
-The backend code is in the `convex` directory.
-  
-`npm run dev` will start the frontend and backend servers.
 
-## App authentication
+# 📸 Web Photobooth App
 
-Chef apps use [Convex Auth](https://auth.convex.dev/) with Anonymous auth for easy sign in. You may wish to change this before deploying your app.
+A fun, interactive photobooth web app that allows users to capture live webcam photos, apply stylish frames, filters, stickers, and export their memories in custom layouts.
 
-## Developing and deploying your app
+---
 
-Check out the [Convex docs](https://docs.convex.dev/) for more information on how to develop with Convex.
-* If you're new to Convex, the [Overview](https://docs.convex.dev/understanding/) is a good place to start
-* Check out the [Hosting and Deployment](https://docs.convex.dev/production/) docs for how to deploy your app
-* Read the [Best Practices](https://docs.convex.dev/understanding/best-practices/) guide for tips on how to improve you app further
+## ✨ Features
 
-## HTTP API
+- 📷 Real-time webcam preview
+- 🔄 Flip camera horizontally before taking photos
+- 🖼️ Apply filters: B&W, Sepia, Vintage, Cool, etc.
+- 🎨 Add stylish frames and stickers
+- 🧩 Choose layout: `2x2`, `3x2`, `4x1`, `4x2`
+- 💾 Export photo collage in high resolution
+- 🎯 Smooth, modern UI built with Tailwind CSS
 
-User-defined http routes are defined in the `convex/router.ts` file. We split these routes into a separate file from `convex/http.ts` to allow us to prevent the LLM from modifying the authentication routes.
+---
+
+## 📸 Preview
+
+![App Preview](./preview.png)
+
+---
+
+## ⚙️ Tech Stack
+
+- [Vite](https://vitejs.dev/) – Lightning fast dev environment
+- [Tailwind CSS](https://tailwindcss.com/) – Modern utility-first styling
+- [Convex](https://convex.dev/) – Realtime backend as a service
+- TypeScript / HTML5 / Canvas API
+- Chef Framework (via Convex)
+
+---
+
+## 🛠️ Project Structure
+
+```
+├── src/                # Main frontend logic
+├── public/frames/      # Sample frame images
+├── convex/             # Backend logic (Convex)
+├── .env.local          # Local env config
+├── vite.config.ts      # Vite config
+├── tailwind.config.js  # Tailwind setup
+└── package.json
+```
+
+---
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/bluenoe/web-photobooth.git
+cd web-photobooth
+npm install
+npm run dev
+```
+
+> App runs at: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 📄 License
+
+MIT License – feel free to use and remix this project.
+
+---
+
+## 👤 Author
+
+**bluenoe**  
+📧 baokhanh.dev281@gmail.com  
+🔗 GitHub: [bluenoe](https://github.com/bluenoe)
+
+---
+
+> Made with ❤️ and a little bit of ✨ magic
